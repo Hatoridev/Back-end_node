@@ -44,9 +44,7 @@ In this part of the course, **Node.js** will be used to create the server and in
     ```
 
 5. **Access the project**:
-    Access the server at
-   ```bash
-   [http://localhost:8000](http://localhost:8000) in your browser.
+    Access the server at [http://localhost:3000](http://localhost:3000) in your browser.
 
 #### On Windows
 
@@ -70,7 +68,7 @@ In this part of the course, **Node.js** will be used to create the server and in
     ```
 
 5. **Access the project**:
-    Access the server at [http://localhost:8000](http://localhost:8000).
+    Access the server at [http://localhost:3000](http://localhost:3000).
 
 #### On Debian/Linux
 
@@ -99,7 +97,7 @@ In this part of the course, **Node.js** will be used to create the server and in
     ```
 
 5. **Access the project**:
-    Access the server at [http://localhost:8000](http://localhost:8000).
+    Access the server at [http://localhost:3000](http://localhost:3000).
 
 ## Lessons 08 to 20 - Using Node-RED
 
@@ -201,7 +199,6 @@ In this part of the course, **Node-RED** will be used to create interactive flow
 - **Lessons 01 to 07**: **Node.js** files will be in the root of the repository and will interact with the **SQLite3** database.
 - **Lessons 08 to 20**: **Node-RED** flows will be defined in the **`flows.json`** file and other configuration files.
 
----
 
 ## Conclusion
 
@@ -226,5 +223,4 @@ This repository provides practical examples of integrating **Node.js**, **Node-R
 
 <div align="left">  
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" height="60" alt="Node.js logo" />  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodered/nodered-original.svg" height="60" alt="Node-RED logo" />  
 </div>  
