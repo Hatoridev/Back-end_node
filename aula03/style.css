@@ -1,0 +1,29 @@
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Estilos para o título principal */
+h1 {
+    color: #333;
+}
+
+/* Estilos para os links */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Efeito ao passar o mouse sobre os links */
+a:hover {
+    background-color: #0056b3;
+}
+
