@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="pt-br"> <!-- Definindo a linguagem da página -->
+<head>
+    <meta charset="UTF-8"> <!-- Definindo a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tornando a página responsiva -->
+    <title>Aula 08 - Trabalhando com Arquivos JSON</title> <!-- Título da página -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    <h1>Aula 08 - Trabalhando com Arquivos JSON</h1> <!-- Título principal da página -->
+
+    <h2>Armazenando Dados em Arquivo JSON</h2> <!-- Subtítulo para armazenar dados -->
+    <form id="data-form"> <!-- Formulário para armazenar dados -->
+        <label for="name">Nome: </label> <!-- Rótulo para o campo nome -->
+        <input type="text" id="name" name="name" required> <!-- Campo de entrada para nome -->
+
+        <label for="email">E-mail: </label> <!-- Rótulo para o campo e-mail -->
+        <input type="email" id="email" name="email" required> <!-- Campo de entrada para e-mail -->
+
+        <button type="submit">Salvar Dados</button> <!-- Botão para enviar o formulário -->
+    </form>
+
+    <h2>Dados Armazenados</h2> <!-- Subtítulo para exibir dados armazenados -->
+    <button id="load-data">Carregar Dados</button> <!-- Botão para carregar os dados armazenados -->
+    <div id="response"></div> <!-- Div para exibir os dados armazenados -->
+
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>
+

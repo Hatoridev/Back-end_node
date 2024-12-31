@@ -1,0 +1,51 @@
+[
+    {
+        "id": "c4a2b25b.5f3d68",
+        "type": "http in",
+        "z": "d097c8d3.67c3c8",
+        "name": "Consumir API Externa",
+        "url": "/api/fetchData",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 100,
+        "wires": [["ffdc9c8b.f83c8"]]
+    },
+    {
+        "id": "ffdc9c8b.f83c8",
+        "type": "http request",
+        "z": "d097c8d3.67c3c8",
+        "name": "Requisição API Externa",
+        "method": "GET",
+        "ret": "obj",
+        "url": "https://jsonplaceholder.typicode.com/users",
+        "tls": "",
+        "x": 300,
+        "y": 100,
+        "wires": [["c4d2b789.4c8368"]]
+    },
+    {
+        "id": "c4d2b789.4c8368",
+        "type": "function",
+        "z": "d097c8d3.67c3c8",
+        "name": "Formatar Dados",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.payload = msg.payload.map(user => ({ name: user.name, email: user.email }));\nreturn msg;",
+        "outputs": 1,
+        "x": 500,
+        "y": 100,
+        "wires": [["1fba6f4d.b85a84"]]
+    },
+    {
+        "id": "1fba6f4d.b85a84",
+        "type": "http response",
+        "z": "d097c8d3.67c3c8",
+        "name": "Resposta API",
+        "statusCode": "200",
+        "headers": {},
+        "x": 700,
+        "y": 100,
+        "wires": []
+    }
+]
+

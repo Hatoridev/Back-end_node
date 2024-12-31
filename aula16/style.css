@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif; /* Definindo a fonte da página */
+    margin: 0; /* Removendo a margem */
+    padding: 0; /* Removendo o padding */
+    background-color: #f4f4f4; /* Cor de fundo da página */
+}
+
+h1 {
+    text-align: center; /* Centralizando o título */
+    color: #333; /* Cor do texto */
+}
+
+button {
+    padding: 10px 20px; /* Adicionando padding ao botão */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Removendo borda do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Mudando o cursor para indicar que é clicável */
+    display: block;
+    margin: 20px auto; /* Centralizando o botão */
+}
+
+button:hover {
+    background-color: #45a049; /* Mudando a cor do botão ao passar o mouse */
+}
+
+#response {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
