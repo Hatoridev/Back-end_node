@@ -1,0 +1,73 @@
+[
+    {
+        "id": "2f53b2b5.d7b9f6",
+        "type": "http in",
+        "z": "8c6a4cbb.c235f8",
+        "name": "Salvar Dados",
+        "url": "/api/saveData",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 100,
+        "wires": [["cbedcc74.35d4a"]]
+    },
+    {
+        "id": "cbedcc74.35d4a",
+        "type": "function",
+        "z": "8c6a4cbb.c235f8",
+        "name": "Salvar no JSON",
+        "func": "var fs = require('fs');\n\nfs.writeFileSync('/home/user/data.json', JSON.stringify(msg.payload)); // Salvando dados no arquivo JSON\nmsg.payload = { message: 'Dados salvos com sucesso!' };",
+        "outputs": 1,
+        "x": 290,
+        "y": 100,
+        "wires": [["b8e2f6db.604f9"]]
+    },
+    {
+        "id": "b8e2f6db.604f9",
+        "type": "http response",
+        "z": "8c6a4cbb.c235f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 490,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7f99e522.79873c",
+        "type": "http in",
+        "z": "8c6a4cbb.c235f8",
+        "name": "Carregar Dados",
+        "url": "/api/getData",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 200,
+        "wires": [["ce3e7ec3.3c8308"]]
+    },
+    {
+        "id": "ce3e7ec3.3c8308",
+        "type": "function",
+        "z": "8c6a4cbb.c235f8",
+        "name": "Ler do JSON",
+        "func": "var fs = require('fs');\n\nvar data = fs.readFileSync('/home/user/data.json');\nmsg.payload = JSON.parse(data); // Lendo os dados do arquivo JSON",
+        "outputs": 1,
+        "x": 290,
+        "y": 200,
+        "wires": [["b8e2f6db.604f9"]]
+    },
+    {
+        "id": "b8e2f6db.604f9",
+        "type": "http response",
+        "z": "8c6a4cbb.c235f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 490,
+        "y": 200,
+        "wires": []
+    }
+]
+
