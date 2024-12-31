@@ -1,0 +1,58 @@
+[{
+    "id": "mainFlow",
+    "type": "tab",
+    "label": "Dashboard",
+    "disabled": false,
+    "info": ""
+},
+{
+    "id": "inputButton",
+    "type": "inject",
+    "z": "mainFlow",
+    "name": "Botão Monitoramento",
+    "topic": "",
+    "payload": "start",
+    "payloadType": "str",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 180,
+    "y": 120,
+    "wires": [["outputTemperature"]]
+},
+{
+    "id": "outputTemperature",
+    "type": "function",
+    "z": "mainFlow",
+    "name": "Temperatura Aleatória",
+    "func": "msg.payload = Math.floor(Math.random() * 100);\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 400,
+    "y": 120,
+    "wires": [["gauge"]]
+},
+{
+    "id": "gauge",
+    "type": "ui_gauge",
+    "z": "mainFlow",
+    "name": "Temperatura",
+    "group": "dashboardGroup",
+    "order": 1,
+    "width": 6,
+    "height": 4,
+    "gtype": "gage",
+    "title": "Temperatura",
+    "label": "°C",
+    "format": "{{value}}",
+    "min": "0",
+    "max": "100",
+    "colors": ["#00b500", "#e6e600", "#ff0000"],
+    "seg1": "",
+    "seg2": "",
+    "x": 630,
+    "y": 120,
+    "wires": []
+}]
+

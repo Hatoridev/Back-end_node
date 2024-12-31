@@ -1,0 +1,25 @@
+<!-- Página HTML simples com título e botão para controlar a interface -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - Dashboard no Node-RED</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard Node-RED</h1>
+        <div id="dashboard">
+            <p>Monitoramento de Temperatura</p>
+            <div class="gauge">
+                <label>Temperatura:</label>
+                <div id="temperature">0</div> °C
+            </div>
+            <button id="toggleButton">Ativar Monitoramento</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
