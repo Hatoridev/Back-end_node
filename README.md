@@ -1,6 +1,6 @@
 # Back-end_node
 
-This repository contains examples of how to integrate **Node.js**, **Node-RED**, and **SQLite3**, creating simple and interactive flows, and manipulating data with an SQLite3 database. The course is divided into two parts:
+This repository contains examples of how to integrate Node.js, Node-RED, and SQLite3, creating simple and interactive flows, as well as manipulating data with an SQLite3 database, with a focus on Back-end development. It is divided into two parts:
 
 - **Lessons 01 to 07**: Using **Node.js**.
 - **Lessons 08 to 20**: Using **Node-RED**.
@@ -44,7 +44,9 @@ In this part of the course, **Node.js** will be used to create the server and in
     ```
 
 5. **Access the project**:
-    Access the server at [http://localhost:8000](http://localhost:8000) in your browser.
+    Access the server at
+   ```bash
+   [http://localhost:8000](http://localhost:8000) in your browser.
 
 #### On Windows
 
