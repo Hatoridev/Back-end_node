@@ -1,0 +1,38 @@
+{
+    "nodes": [
+        {
+            "id": "http_in",
+            "type": "http in",
+            "name": "Requisição GET /users",
+            "url": "/users",
+            "method": "get",
+            "x": 200,
+            "y": 200,
+            "wires": [["function_get_users"]]
+        },
+        {
+            "id": "function_get_users",
+            "type": "function",
+            "name": "Obter usuários",
+            "func": "const sqlite3 = global.get('sqlite');\n\n// Conectar ao banco de dados SQLite\nconst db = new sqlite3.Database('dados.db');\n\n// Consultar todos os usuários\ndb.all('SELECT * FROM users', [], (err, rows) => {\n    if (err) {\n        msg.payload = { error: err.message };\n        return node.send(msg);\n    }\n    msg.payload = rows;\n    node.send(msg);\n});\n\n// Fechar a conexão com o banco de dados\ndb.close();",
+            "x": 400,
+            "y": 200,
+            "wires": [["http_response"]]
+        },
+        {
+            "id": "http_response",
+            "type": "http response",
+            "name": "Resposta HTTP",
+            "statusCode": "200",
+            "headers": {},
+            "x": 600,
+            "y": 200,
+            "wires": []
+        }
+    ],
+    "info": {
+        "name": "Aula 12 - Criando uma API Restful com Node-RED",
+        "version": "1.0"
+    }
+}
+
