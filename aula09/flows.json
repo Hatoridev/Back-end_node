@@ -1,0 +1,70 @@
+[{
+    "id": "9c97a67f.bc21d8",
+    "type": "inject",
+    "z": "7a9c8f30.83db88",
+    "name": "Iniciar Fluxo",
+    "props": [{
+        "p": "payload"
+    }],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "0.1",
+    "topic": "",
+    "payload": "Mensagem Inicial",
+    "payloadType": "str",
+    "x": 150,
+    "y": 100,
+    "wires": [["25a3343b.676db6"]]
+}, {
+    "id": "25a3343b.676db6",
+    "type": "function",
+    "z": "7a9c8f30.83db88",
+    "name": "Manipulação com Variáveis",
+    "func": "// Atribuindo variáveis Context, Flow e Global\n\nlet contextVar = flow.get('contextVar') || 0;\nlet globalVar = global.get('globalVar') || 0;\n\ncontextVar++;\nglobalVar++;\n\nflow.set('contextVar', contextVar);\nglobal.set('globalVar', globalVar);\n\n// Definindo múltiplas saídas com base na mensagem\nif (msg.payload === 'Mensagem Inicial') {\n    return [{payload: 'Mensagem com Contexto: ' + contextVar}, {payload: 'Mensagem com Global: ' + globalVar}, null];\n} else {\n    return [null, null, {payload: 'Sem mensagem inicial'}];\n}",
+    "outputs": "3",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 380,
+    "y": 100,
+    "wires": [
+        ["57d12a5a.b579c8"],
+        ["3f7acff5.2b3478"],
+        ["8c6951e1.c3b508"]
+    ]
+}, {
+    "id": "57d12a5a.b579c8",
+    "type": "debug",
+    "z": "7a9c8f30.83db88",
+    "name": "Mensagem Context",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 630,
+    "y": 60,
+    "wires": []
+}, {
+    "id": "3f7acff5.2b3478",
+    "type": "debug",
+    "z": "7a9c8f30.83db88",
+    "name": "Mensagem Global",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 630,
+    "y": 120,
+    "wires": []
+}, {
+    "id": "8c6951e1.c3b508",
+    "type": "debug",
+    "z": "7a9c8f30.83db88",
+    "name": "Mensagem Sem Inicial",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 630,
+    "y": 180,
+    "wires": []
+}]
+
