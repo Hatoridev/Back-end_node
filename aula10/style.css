@@ -1,0 +1,50 @@
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte da página */
+    background-color: #f4f4f4; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 24px; /* Tamanho das fontes do título */
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilo para as seções */
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: square;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 3px;
+    border-radius: 4px;
+}
+

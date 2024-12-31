@@ -1,0 +1,39 @@
+[
+    {
+        "id": "inject_node",
+        "type": "inject",
+        "name": "Mensagem Inicial",
+        "topic": "",
+        "payload": "Mensagem Inicial",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 100,
+        "wires": [["function_node"]]
+    },
+    {
+        "id": "function_node",
+        "type": "function",
+        "name": "Manipulação de Mensagem",
+        "func": "msg.payload = msg.payload + ' - Fluxo Processado';\nreturn msg;",
+        "outputs": "1",
+        "x": 300,
+        "y": 100,
+        "wires": [["debug_node"]]
+    },
+    {
+        "id": "debug_node",
+        "type": "debug",
+        "name": "Debug",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 500,
+        "y": 100,
+        "wires": []
+    }
+]
+
