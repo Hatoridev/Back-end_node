@@ -1,0 +1,37 @@
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte para o corpo do documento */
+    background-color: #f4f4f4; /* Cor de fundo suave para a página */
+    color: #333; /* Cor do texto */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #007BFF; /* Cor de fundo azul para o cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 10px 0; /* Adiciona padding acima e abaixo do texto */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
+/* Estilo das seções */
+section {
+    padding: 20px; /* Adiciona padding nas seções */
+    margin: 10px; /* Adiciona margem ao redor de cada seção */
+    background-color: white; /* Cor de fundo branca para as seções */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor das seções */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 10px 0; /* Adiciona padding no rodapé */
+    background-color: #333; /* Cor de fundo escura para o rodapé */
+    color: white; /* Cor do texto no rodapé */
+    position: fixed; /* Torna o rodapé fixo no final da página */
+    width: 100%; /* Ocupa toda a largura da tela */
+    bottom: 0; /* Alinha o rodapé na parte inferior da página */
+}
+

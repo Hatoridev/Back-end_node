@@ -1,0 +1,38 @@
+[
+    {
+        "id": "04ed99dd26431bdc",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f1aee1d7.74b708",
+        "type": "function",
+        "z": "04ed99dd26431bdc",
+        "name": "Hello Function",
+        "func": "msg.payload = 'Hello, Node-RED!';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 80,
+        "y": 160,
+        "wires": [
+            [
+                "d6b85be9.5c7a5"
+            ]
+        ]
+    },
+    {
+        "id": "d6b85be9.5c7a5",
+        "type": "debug",
+        "z": "04ed99dd26431bdc",
+        "name": "Debug Output",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 320,
+        "y": 160,
+        "wires": []
+    }
+]
