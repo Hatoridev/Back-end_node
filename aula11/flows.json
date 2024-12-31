@@ -1,0 +1,83 @@
+[
+    {
+        "id": "44c12a2c.b7a56",
+        "type": "inject",
+        "z": "ad5f0f11.a3b1c",
+        "name": "Mensagem Inicial",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Mensagem Inicial",
+        "payloadType": "str",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "4a57f65e.c68e5c"
+            ]
+        ]
+    },
+    {
+        "id": "4a57f65e.c68e5c",
+        "type": "function",
+        "z": "ad5f0f11.a3b1c",
+        "name": "Adicionar Texto",
+        "func": "msg.payload = msg.payload + ' - Fluxo Processado';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "e8a2dbfb.1796c"
+            ]
+        ]
+    },
+    {
+        "id": "e8a2dbfb.1796c",
+        "type": "switch",
+        "z": "ad5f0f11.a3b1c",
+        "name": "Filtrar Mensagem",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "Fluxo",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": "false",
+        "outputs": 1,
+        "x": 570,
+        "y": 160,
+        "wires": [
+            [
+                "f43107cf.9ad5b"
+            ]
+        ]
+    },
+    {
+        "id": "f43107cf.9ad5b",
+        "type": "debug",
+        "z": "ad5f0f11.a3b1c",
+        "name": "Resultado",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 760,
+        "y": 160,
+        "wires": []
+    }
+]
+

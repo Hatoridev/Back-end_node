@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Manipulação com Funções e Condicionais no Node-RED</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Aula 04!</h1>
+        <p>Vamos explorar o uso do nó **Switch** para filtrar mensagens com base no conteúdo de `payload`.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Objetivo da Aula</h2>
+            <p>Na aula de hoje, aprenderemos a:</p>
+            <ul>
+                <li>Manipular mensagens utilizando o nó **Function**.</li>
+                <li>Filtrar mensagens com o nó **Switch** baseado no conteúdo de `payload`.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Fluxo do Node-RED</h2>
+            <p>O fluxo da aula consiste nos seguintes passos:</p>
+            <ul>
+                <li>**Inject**: Envia uma mensagem inicial.</li>
+                <li>**Function**: Modifica a mensagem adicionando um texto extra.</li>
+                <li>**Switch**: Filtra a mensagem, verificando se o texto contém a palavra "Fluxo".</li>
+                <li>**Debug**: Exibe a mensagem final no painel de debug.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Passos para rodar no Termux</h2>
+            <ol>
+                <li>Clone o repositório.</li>
+                <li>Instale o Node.js e o Node-RED.</li>
+                <li>Execute o Node-RED: <code>node-red</code>.</li>
+                <li>Importe o fluxo do arquivo <code>flows.json</code> no Node-RED.</li>
+                <li>Acesse o Node-RED em <a href="http://localhost:1880" target="_blank">localhost:1880</a>.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Curso Node-RED - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
