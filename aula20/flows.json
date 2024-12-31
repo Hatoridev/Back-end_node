@@ -1,0 +1,49 @@
+{
+    "nodes": [
+        {
+            "id": "http_in",
+            "type": "http in",
+            "name": "Requisição GET /clima",
+            "url": "/clima",
+            "method": "get",
+            "x": 200,
+            "y": 200,
+            "wires": [["http_request"]]
+        },
+        {
+            "id": "http_request",
+            "type": "http request",
+            "name": "Chamada API de Clima",
+            "method": "GET",
+            "ret": "obj",
+            "url": "https://api.openweathermap.org/data/2.5/weather?q=São Paulo&appid=SUA_CHAVE_DE_API",
+            "x": 400,
+            "y": 200,
+            "wires": [["function_parse_weather"]]
+        },
+        {
+            "id": "function_parse_weather",
+            "type": "function",
+            "name": "Parse Dados de Clima",
+            "func": "msg.payload = {\n    temperatura: msg.payload.main.temp,\n    descricao: msg.payload.weather[0].description,\n    cidade: msg.payload.name\n};\nreturn msg;",
+            "x": 600,
+            "y": 200,
+            "wires": [["http_response"]]
+        },
+        {
+            "id": "http_response",
+            "type": "http response",
+            "name": "Resposta HTTP",
+            "statusCode": "200",
+            "headers": {},
+            "x": 800,
+            "y": 200,
+            "wires": []
+        }
+    ],
+    "info": {
+        "name": "Aula 20 - Integração com API de Clima",
+        "version": "1.0"
+    }
+}
+
