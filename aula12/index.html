@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 - Criando API REST no Node-RED</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Aula 05!</h1>
+        <p>Vamos criar uma API simples em Node-RED que retorna dados simulados sobre um usuário.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Objetivo da Aula</h2>
+            <p>Na aula de hoje, aprenderemos a:</p>
+            <ul>
+                <li>Criar uma API no Node-RED com o nó **HTTP In**.</li>
+                <li>Retornar dados simulados usando o nó **Function**.</li>
+                <li>Responder a requisições HTTP com o nó **HTTP Response**.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Fluxo do Node-RED</h2>
+            <p>O fluxo consiste nos seguintes passos:</p>
+            <ul>
+                <li>**Inject**: Envia uma mensagem inicial com dados simulados.</li>
+                <li>**HTTP In**: Define uma rota de API para receber requisições GET.</li>
+                <li>**Function**: Manipula a mensagem e define a resposta da API com dados simulados.</li>
+                <li>**HTTP Response**: Envia a resposta da API para o cliente.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Passos para rodar no Termux</h2>
+            <ol>
+                <li>Clone o repositório.</li>
+                <li>Instale o Node.js e o Node-RED:</li>
+                <pre><code>pkg install nodejs
+npm install -g --unsafe-perm node-red</code></pre>
+                <li>Execute o Node-RED:</li>
+                <pre><code>node-red</code></pre>
+                <li>Implemente o fluxo com o arquivo <code>flows.json</code>.</li>
+                <li>Acesse a URL [http://localhost:1880](http://localhost:1880) no navegador.</li>
+                <li>Acesse a API em <code>http://localhost:1880/api/usuario</code> para ver os dados simulados.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Curso Node-RED - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+

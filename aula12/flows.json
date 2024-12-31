@@ -1,0 +1,74 @@
+[
+    {
+        "id": "e28f1b56.a74688",
+        "type": "inject",
+        "z": "c3bbca5f.d9b8e8",
+        "name": "Iniciar Requisição",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"nome\": \"João\", \"idade\": 30}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "f6ff8d3e.c4e348"
+            ]
+        ]
+    },
+    {
+        "id": "f6ff8d3e.c4e348",
+        "type": "http in",
+        "z": "c3bbca5f.d9b8e8",
+        "name": "API GET",
+        "url": "/api/usuario",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "fc23e27d.6534d8"
+            ]
+        ]
+    },
+    {
+        "id": "fc23e27d.6534d8",
+        "type": "function",
+        "z": "c3bbca5f.d9b8e8",
+        "name": "Gerar Resposta",
+        "func": "msg.payload = { nome: \"João\", idade: 30 }; // Dados simulados\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "91b68a39.906aa"
+            ]
+        ]
+    },
+    {
+        "id": "91b68a39.906aa",
+        "type": "http response",
+        "z": "c3bbca5f.d9b8e8",
+        "name": "Resposta da API",
+        "statusCode": "200",
+        "headers": {},
+        "x": 650,
+        "y": 160,
+        "wires": []
+    }
+]
+
