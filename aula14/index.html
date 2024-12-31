@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="pt-br"> <!-- Definindo a linguagem da página -->
+<head>
+    <meta charset="UTF-8"> <!-- Definindo a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tornando a página responsiva -->
+    <title>Aula 07 - Enviando Dados, Cookies e HTTP GET</title> <!-- Título da página -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    <h1>Aula 07 - Enviando Dados, Cookies e HTTP GET</h1> <!-- Título principal da página -->
+
+    <h2>Formulário de Envio</h2> <!-- Subtítulo para o formulário -->
+    <form id="data-form"> <!-- Definindo o formulário com ID "data-form" -->
+        <label for="name">Nome: </label> <!-- Rótulo para o campo nome -->
+        <input type="text" id="name" name="name" required> <!-- Campo de entrada para nome -->
+
+        <label for="email">E-mail: </label> <!-- Rótulo para o campo e-mail -->
+        <input type="email" id="email" name="email" required> <!-- Campo de entrada para e-mail -->
+
+        <button type="submit">Enviar</button> <!-- Botão para enviar o formulário -->
+    </form>
+
+    <div id="response"></div> <!-- Div para exibir a resposta da API -->
+
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+[
+    {
+        "id": "a3d5b9a2.fea9b",
+        "type": "http in",
+        "z": "8c6a4cbb.c235f8",
+        "name": "Formulario Submit",
+        "url": "/api/submit",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 100,
+        "wires": [["3f6f826b.c6f5d8"]]
+    },
+    {
+        "id": "3f6f826b.c6f5d8",
+        "type": "function",
+        "z": "8c6a4cbb.c235f8",
+        "name": "Processar Dados",
+        "func": "msg.payload = { message: 'Dados recebidos com sucesso!' }; // Retorna mensagem de sucesso",
+        "outputs": 1,
+        "x": 290,
+        "y": 100,
+        "wires": [["4ff5b907.01527c"]]
+    },
+    {
+        "id": "4ff5b907.01527c",
+        "type": "http response",
+        "z": "8c6a4cbb.c235f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 490,
+        "y": 100,
+        "wires": []
+    }
+]
+

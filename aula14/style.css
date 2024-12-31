@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif; /* Definindo a fonte da página */
+    margin: 0; /* Removendo a margem */
+    padding: 0; /* Removendo o padding */
+    background-color: #f4f4f4; /* Definindo a cor de fundo da página */
+}
+
+h1 {
+    text-align: center; /* Centralizando o título */
+    color: #333; /* Cor do texto */
+}
+
+form {
+    max-width: 400px; /* Definindo a largura máxima do formulário */
+    margin: 20px auto; /* Centralizando o formulário */
+    padding: 20px;
+    background-color: #fff; /* Cor de fundo do formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionando sombra */
+}
+
+label {
+    display: block; /* Fazendo o rótulo ocupar toda a largura */
+    margin-bottom: 5px; /* Adicionando margem abaixo do rótulo */
+}
+
+input {
+    width: 100%; /* Fazendo o campo de entrada ocupar toda a largura */
+    padding: 8px;
+    margin-bottom: 15px; /* Margem abaixo dos campos */
+    border: 1px solid #ddd; /* Cor da borda */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+button {
+    padding: 10px 20px; /* Adicionando padding ao botão */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Removendo borda do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Mudando o cursor para indicar que é clicável */
+}
+
+button:hover {
+    background-color: #45a049; /* Mudando a cor do botão ao passar o mouse */
+}
+
